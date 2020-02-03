@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const LikeSection = props => {
+  const [likes] = useState(props.likes)
+  /* console.log("like section props:", props) */
   return (
     <div>
     <div
@@ -15,8 +17,7 @@ const LikeSection = props => {
       </div>
     </div>
     <p className="like-number">
-      
-      likes</p>
+      {likes} likes</p>
 </div>
   )
 };
